@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mobil.wallpaper_app.ui.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="com.mobil.wallpaper_app.ui.fragment.PopularFragment"
+        android:label="@string/menu_popular"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/nav_random"
+        android:name="com.mobil.wallpaper_app.ui.fragment.RandomFragment"
+        android:label="@string/menu_random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="com.mobil.wallpaper_app.ui.fragment.LikedFragment"
+        android:label="@string/menu_liked"
+        tools:layout="@layout/fragment_liked" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.mobil.wallpaper_app.ui.photo.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" >
+        <action
+            android:id="@+id/action_photoFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.mobil.wallpaper_app.ui.photo.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+</navigation>
